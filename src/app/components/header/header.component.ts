@@ -25,6 +25,12 @@ export class HeaderComponent {
     private filterService: FilterService
   ) {}
 
+  showNotification: boolean = false;
+
+  toggleNotification(): void {
+    this.showNotification = !this.showNotification;
+  }
+
   updateSiteData(event: Event) {
     const selectElement = event.target as HTMLSelectElement;
     this.selectedSite = selectElement.value;
